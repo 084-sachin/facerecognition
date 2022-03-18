@@ -2,38 +2,18 @@
 
 Face Recognition using OpenCV in Python
 
-# Youtube Tutorial
-https://youtu.be/h21wMKGs0qs
+
 
 ### Prerequisites
 
-Numpy</br>
-OpenCV
+Open The Terminal in the workspace and Run the following command
+**pip3 install opencv-contrib-python**
+The project is ready to function after this
 
-#### Note: Please install opencv-contrib-python package instead of opencv-contrib as it contains the main modules and also contrib modules.
-
-### Installing
-
-Install Numpy via anaconda:
-conda install numpy
-
-Install OpenCV via anaconda:
-conda install -c menpo opencv
-
-
-## Running the tests
-
-Run Tester.py script on commandline to train recognizer on training images and also predict test_img:<br>
-##### python tester.py
-1.Place some test images in TestImages folder that you want to predict  in tester.py file</br>
-2.Place Images for training the classifier in trainingImages folder.If you want to train clasifier to recognize multiple people then add each persons folder in separate label markes as 0,1,2,etc and then add their names along with labels in tester.py/videoTester.py file in 'name' variable.</br>
-3.To generate test images for training classifier use videoimg.py file.</br>
-4.To do test run via tester.py give the path of image in test_img variable</br>
-5.Use "videoTester.py" script for predicting faces realtime via your webcam.(But ensure that you run tester.py first since it generates training.yml file that is being used in "videoTester.py" script.
-
-
-
-## Acknowledgments
-* https://www.superdatascience.com/opencv-face-recognition/
-* https://pythonprogramming.net/haar-cascade-face-eye-detection-python-opencv-tutorial/
+The project serve two functionalities
+1) Open the tester.py file, run the file, it will identify the image stored in TestImages folder with the images kept in trainingImages folder and will show the name.
+    I have kept some celebrity images in the folder to test it 
+2) Open the videoTester.py file, it will recognize the live video with the images kept in training Images folder.
+    For testing this, we can make a separate folder with our images (30-40) and then enter the name in the dictionary line 11 in videoTester.py file
+    If the match is greater than or equal to 39%, it will show the result. We can increase or decrease the accuracy but it is preferred to keep it in this range.
 
